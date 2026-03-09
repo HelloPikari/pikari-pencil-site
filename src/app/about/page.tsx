@@ -15,27 +15,29 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <Divider />
-      <AboutHero />
-      <Divider />
-      <div style={{ paddingInline: '64px' }}>
-        <Image
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80"
-          alt="Team collaboration"
-          width={1400}
-          height={400}
-          className="w-full object-cover"
-          style={{ height: '400px', borderRadius: '4px' }}
-        />
+      <div className="content-wrapper">
+        <Divider />
+        <AboutHero />
+        <Divider />
+        <div style={{ paddingInline: 'var(--spacing-page-x)' }}>
+          <Image
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80"
+            alt="Team collaboration"
+            width={1400}
+            height={400}
+            className="w-full object-cover"
+            style={{ aspectRatio: '7 / 2', borderRadius: '4px' }}
+          />
+        </div>
+        <Divider />
+        <OurStory />
+        <Divider />
+        <TeamGrid />
+        <Divider />
+        <Values />
+        <Divider />
+        <Footer />
       </div>
-      <Divider />
-      <OurStory />
-      <Divider />
-      <TeamGrid />
-      <Divider />
-      <Values />
-      <Divider />
-      <Footer />
     </>
   );
 }

@@ -14,17 +14,25 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <Divider />
-      <ContactHero />
-      <Divider />
-      <section className="flex" style={{ padding: '48px 64px', gap: '48px' }}>
-        <ContactForm />
-        <ContactInfo />
-      </section>
-      <Divider />
-      <MapSection />
-      <Divider />
-      <Footer />
+      <div className="content-wrapper">
+        <Divider />
+        <ContactHero />
+        <Divider />
+        <section
+          className="flex flex-col md:flex-row"
+          style={{
+            padding: 'var(--spacing-section-y-sm) var(--spacing-page-x)',
+            gap: 'var(--spacing-column-gap)',
+          }}
+        >
+          <ContactForm />
+          <ContactInfo />
+        </section>
+        <Divider />
+        <MapSection />
+        <Divider />
+        <Footer />
+      </div>
     </>
   );
 }

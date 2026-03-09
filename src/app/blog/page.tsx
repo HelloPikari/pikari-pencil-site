@@ -18,12 +18,14 @@ export default function BlogPage() {
   return (
     <>
       <Header />
-      <Divider />
-      <BlogHero />
-      <BlogContent posts={posts} featuredPost={featuredPost} categories={categories} />
-      <Divider />
-      <NewsletterCTA title="Never Miss a Discovery" />
-      <Footer />
+      <div className="content-wrapper">
+        <Divider />
+        <BlogHero />
+        <BlogContent posts={posts} featuredPost={featuredPost} categories={categories} />
+        <Divider />
+        <NewsletterCTA title="Never Miss a Discovery" />
+        <Footer />
+      </div>
     </>
   );
 }

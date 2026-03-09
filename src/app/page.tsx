@@ -13,20 +13,22 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <Divider />
-      <Hero />
-      <HeroImage />
-      <Divider />
-      <FeaturedDiscoveries />
-      <Divider />
-      <Metrics />
-      <Divider />
-      <OurApproach />
-      <Divider />
-      <Testimonial />
-      <Divider />
-      <NewsletterCTA title="Stay Curious" />
-      <Footer />
+      <div className="content-wrapper">
+        <Divider />
+        <Hero />
+        <HeroImage />
+        <Divider />
+        <FeaturedDiscoveries />
+        <Divider />
+        <Metrics />
+        <Divider />
+        <OurApproach />
+        <Divider />
+        <Testimonial />
+        <Divider />
+        <NewsletterCTA title="Stay Curious" />
+        <Footer />
+      </div>
     </>
   );
 }
