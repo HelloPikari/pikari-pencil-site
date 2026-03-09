@@ -12,7 +12,7 @@ export default function CategoryFilter({
   const allCategories = ['All', ...categories];
 
   return (
-    <div className="flex flex-wrap" style={{ gap: '8px', paddingInline: '64px' }}>
+    <div className="flex flex-wrap" style={{ gap: '8px', paddingInline: 'var(--spacing-page-x)' }}>
       {allCategories.map((cat) => {
         const isActive = cat === active;
         return (

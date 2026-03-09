@@ -12,7 +12,7 @@ export default function PostCard({ post }: { post: Post }) {
           width={800}
           height={500}
           className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          style={{ height: '240px' }}
+          style={{ aspectRatio: '16 / 10' }}
         />
       </div>
       <div
@@ -30,7 +30,7 @@ export default function PostCard({ post }: { post: Post }) {
       <h3
         className="font-heading italic m-0 transition-colors duration-200"
         style={{
-          fontSize: '22px',
+          fontSize: 'var(--font-size-section-title)',
           letterSpacing: '0.5px',
           lineHeight: 1.2,
           color: 'var(--color-text)',

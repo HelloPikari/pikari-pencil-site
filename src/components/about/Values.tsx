@@ -18,18 +18,18 @@ const values = [
 
 export default function Values() {
   return (
-    <section style={{ padding: '48px 64px' }}>
+    <section style={{ padding: 'var(--spacing-section-y-sm) var(--spacing-page-x)' }}>
       <h2
         className="font-heading italic m-0"
         style={{
-          fontSize: '22px',
+          fontSize: 'var(--font-size-section-title)',
           color: 'var(--color-text)',
           marginBlockEnd: '32px',
         }}
       >
         What We Value
       </h2>
-      <div className="grid grid-cols-3" style={{ gap: '48px' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 'var(--spacing-column-gap)' }}>
         {values.map((value) => (
           <div
             key={value.title}

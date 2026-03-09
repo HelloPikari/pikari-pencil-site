@@ -2,12 +2,12 @@ export default function Testimonial() {
   return (
     <section
       className="flex flex-col items-center text-center"
-      style={{ paddingBlock: '80px', paddingInline: '64px' }}
+      style={{ paddingBlock: 'var(--spacing-section-y)', paddingInline: 'var(--spacing-page-x)' }}
     >
       <blockquote
         className="font-heading italic m-0"
         style={{
-          fontSize: '28px',
+          fontSize: 'var(--font-size-quote)',
           color: 'var(--color-text)',
           maxWidth: '900px',
           lineHeight: 1.4,

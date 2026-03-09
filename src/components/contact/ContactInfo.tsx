@@ -25,11 +25,11 @@ export default function ContactInfo() {
   ];
 
   return (
-    <div style={{ width: '380px', flexShrink: 0 }}>
+    <div>
       <h2
         className="font-heading italic m-0"
         style={{
-          fontSize: '22px',
+          fontSize: 'var(--font-size-section-title)',
           color: 'var(--color-text)',
           marginBlockEnd: '32px',
         }}

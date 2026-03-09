@@ -7,7 +7,7 @@ export const mdxComponents: MDXComponents = {
     <h2
       className="font-heading italic"
       style={{
-        fontSize: '24px',
+        fontSize: 'var(--font-size-mdx-h2)',
         color: 'var(--color-text)',
         marginBlockStart: '32px',
         marginBlockEnd: '16px',
@@ -20,7 +20,7 @@ export const mdxComponents: MDXComponents = {
     <p
       className="font-body"
       style={{
-        fontSize: '16px',
+        fontSize: 'var(--font-size-body)',
         lineHeight: 1.6,
         color: 'var(--color-text-secondary)',
         marginBlock: '16px',
@@ -36,7 +36,7 @@ export const mdxComponents: MDXComponents = {
         paddingInlineStart: '20px',
         marginInline: 0,
         marginBlock: '24px',
-        fontSize: '20px',
+        fontSize: 'var(--font-size-mdx-blockquote)',
         color: 'var(--color-text)',
         lineHeight: 1.4,
       }}

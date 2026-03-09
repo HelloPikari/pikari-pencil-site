@@ -4,16 +4,25 @@ import { Post } from '@/types/post';
 
 export default function FeaturedPost({ post }: { post: Post }) {
   return (
-    <section style={{ paddingInline: '64px', paddingBlock: '48px' }}>
-      <Link href={`/blog/${post.slug}`} className="flex no-underline group" style={{ gap: '32px' }}>
-        <div className="overflow-hidden flex-shrink-0" style={{ borderRadius: '4px' }}>
+    <section
+      style={{
+        paddingInline: 'var(--spacing-page-x)',
+        paddingBlock: 'var(--spacing-section-y-sm)',
+      }}
+    >
+      <Link
+        href={`/blog/${post.slug}`}
+        className="flex flex-col md:flex-row no-underline group"
+        style={{ gap: 'var(--spacing-column-gap)' }}
+      >
+        <div className="overflow-hidden md:w-1/2" style={{ borderRadius: '4px' }}>
           <Image
             src={post.image}
             alt={post.title}
             width={600}
             height={360}
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            style={{ width: '600px', height: '360px' }}
+            className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            style={{ aspectRatio: '5 / 3' }}
           />
         </div>
         <div className="flex flex-col justify-center">
@@ -47,7 +56,7 @@ export default function FeaturedPost({ post }: { post: Post }) {
           <h2
             className="font-heading italic m-0"
             style={{
-              fontSize: '28px',
+              fontSize: 'var(--font-size-quote)',
               color: 'var(--color-text)',
               lineHeight: 1.2,
               marginBlockEnd: '12px',

@@ -32,7 +32,7 @@ export default function ContactForm() {
       <h2
         className="font-heading italic m-0"
         style={{
-          fontSize: '22px',
+          fontSize: 'var(--font-size-section-title)',
           color: 'var(--color-text)',
           marginBlockEnd: '32px',
         }}
@@ -40,17 +40,13 @@ export default function ContactForm() {
         Send a Message
       </h2>
       <form className="flex flex-col" style={{ gap: '20px' }} onSubmit={(e) => e.preventDefault()}>
-        <div className="flex" style={{ gap: '16px' }}>
-          <div className="flex-1">
-            <FormField label="First Name">
-              <input type="text" placeholder="Your first name" style={inputStyles} />
-            </FormField>
-          </div>
-          <div className="flex-1">
-            <FormField label="Last Name">
-              <input type="text" placeholder="Your last name" style={inputStyles} />
-            </FormField>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '16px' }}>
+          <FormField label="First Name">
+            <input type="text" placeholder="Your first name" style={inputStyles} />
+          </FormField>
+          <FormField label="Last Name">
+            <input type="text" placeholder="Your last name" style={inputStyles} />
+          </FormField>
         </div>
         <FormField label="Email Address">
           <input type="email" placeholder="you@company.com" style={inputStyles} />

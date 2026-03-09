@@ -12,14 +12,14 @@ export default function NewsletterCTA({
       className="flex flex-col items-center text-center"
       style={{
         backgroundColor: 'var(--color-dark)',
-        paddingBlock: '80px',
-        paddingInline: '64px',
+        paddingBlock: 'var(--spacing-section-y)',
+        paddingInline: 'var(--spacing-page-x)',
       }}
     >
       <h2
         className="font-heading italic m-0"
         style={{
-          fontSize: '48px',
+          fontSize: 'var(--font-size-cta-title)',
           color: 'var(--color-white)',
           marginBlockEnd: '12px',
         }}
@@ -36,9 +36,9 @@ export default function NewsletterCTA({
       >
         {subtitle}
       </p>
-      <div className="flex items-center" style={{ gap: '8px' }}>
+      <div className="flex flex-col sm:flex-row gap-2 max-w-md w-full">
         <div
-          className="newsletter-input-wrapper"
+          className="newsletter-input-wrapper flex-1"
           style={{
             border: '1px solid var(--color-text-secondary)',
             borderRadius: '4px',
@@ -48,9 +48,8 @@ export default function NewsletterCTA({
           <input
             type="email"
             placeholder="Enter your email"
-            className="font-body bg-transparent border-none outline-none"
+            className="font-body bg-transparent border-none outline-none w-full"
             style={{
-              width: '320px',
               padding: '12px 16px',
               fontSize: '14px',
               color: 'var(--color-white)',

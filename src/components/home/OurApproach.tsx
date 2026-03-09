@@ -21,11 +21,11 @@ const pillars = [
 
 export default function OurApproach() {
   return (
-    <section style={{ padding: '48px 64px' }}>
+    <section style={{ padding: 'var(--spacing-section-y-sm) var(--spacing-page-x)' }}>
       <div style={{ marginBlockEnd: '12px' }}>
         <h2
           className="font-heading italic m-0"
-          style={{ fontSize: '22px', color: 'var(--color-text)' }}
+          style={{ fontSize: 'var(--font-size-section-title)', color: 'var(--color-text)' }}
         >
           Our Approach
         </h2>
@@ -43,7 +43,7 @@ export default function OurApproach() {
         We combine deep research with practical frameworks to help teams navigate the complexities
         of AI product development.
       </p>
-      <div className="grid grid-cols-3" style={{ gap: '48px' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 'var(--spacing-column-gap)' }}>
         {pillars.map((pillar) => (
           <div
             key={pillar.number}

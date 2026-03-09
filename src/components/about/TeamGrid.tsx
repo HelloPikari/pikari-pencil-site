@@ -25,18 +25,21 @@ const team = [
 
 export default function TeamGrid() {
   return (
-    <section style={{ padding: '48px 64px' }}>
+    <section style={{ padding: 'var(--spacing-section-y-sm) var(--spacing-page-x)' }}>
       <h2
         className="font-heading italic m-0"
         style={{
-          fontSize: '22px',
+          fontSize: 'var(--font-size-section-title)',
           color: 'var(--color-text)',
           marginBlockEnd: '32px',
         }}
       >
         The Team
       </h2>
-      <div className="grid grid-cols-4" style={{ gap: '24px' }}>
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+        style={{ gap: 'var(--spacing-card-gap)' }}
+      >
         {team.map((member) => (
           <div key={member.name}>
             <Image
@@ -45,7 +48,7 @@ export default function TeamGrid() {
               width={400}
               height={320}
               className="w-full object-cover"
-              style={{ height: '320px', borderRadius: '4px', marginBlockEnd: '16px' }}
+              style={{ aspectRatio: '5 / 4', borderRadius: '4px', marginBlockEnd: '16px' }}
             />
             <h3
               className="font-heading m-0"

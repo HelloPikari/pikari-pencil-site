@@ -62,9 +62,12 @@ function FooterColumn({
 
 export default function Footer() {
   return (
-    <footer style={{ padding: '48px 64px' }}>
-      <div className="flex" style={{ gap: '48px', marginBlockEnd: '48px' }}>
-        <div style={{ width: '300px', flexShrink: 0 }}>
+    <footer style={{ padding: 'var(--spacing-section-y-sm) var(--spacing-page-x)' }}>
+      <div
+        className="grid grid-cols-1 md:grid-cols-4"
+        style={{ gap: 'var(--spacing-column-gap)', marginBlockEnd: '48px' }}
+      >
+        <div>
           <Link href="/" className="no-underline block" style={{ marginBlockEnd: '12px' }}>
             <Image src="/images/pikari-logo.svg" alt="Pikari" width={100} height={24} />
           </Link>
@@ -76,11 +79,9 @@ export default function Footer() {
             development.
           </p>
         </div>
-        <div className="flex flex-1 justify-end" style={{ gap: '64px' }}>
-          <FooterColumn title="Explore" links={exploreLinks} />
-          <FooterColumn title="Company" links={companyLinks} />
-          <FooterColumn title="Legal" links={legalLinks} />
-        </div>
+        <FooterColumn title="Explore" links={exploreLinks} />
+        <FooterColumn title="Company" links={companyLinks} />
+        <FooterColumn title="Legal" links={legalLinks} />
       </div>
       <div
         className="flex items-center justify-between"
